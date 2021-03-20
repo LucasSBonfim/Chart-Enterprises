@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 /* Components imports */
 
@@ -30,7 +32,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
   imports: [
 
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
 
   ],
 
