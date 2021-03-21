@@ -4,7 +4,7 @@ import { OverlayContainer } from '@angular/cdk/overlay';
 export enum ThemeType {
     Light = 'Light',
     Dark = 'Dark'
-}
+};
 
 @Injectable({ providedIn: 'root' })
 export class ThemeService {
@@ -13,15 +13,15 @@ export class ThemeService {
         this.addTheme(this.theme);
     }
 
-    get theme(): ThemeType {
-        const theme = ThemeType[localStorage.getItem('theme')];
+     get theme(): ThemeType {
+         const theme = ThemeType[localStorage.getItem('theme')];
 
-        if (typeof theme !== 'undefined') {
-            return theme;
-        }
+         if (typeof theme !== 'undefined') {
+             return theme;
+         }
 
-        return ThemeType.Light;
-    }
+         return ThemeType.Light;
+     }
 
     set theme(theme: ThemeType) {
         localStorage.setItem('theme', theme);

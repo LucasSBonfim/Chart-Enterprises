@@ -1,14 +1,54 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$chart-enterprises-primary: mat-palette($mat-indigo);
+$chart-enterprises-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$chart-enterprises-warn: mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$chart-enterprises-theme: mat-light-theme((
+  color: (
+    primary: $chart-enterprises-primary,
+    accent: $chart-enterprises-accent,
+    warn: $chart-enterprises-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($chart-enterprises-theme);
+
+
 /* This external style sheet modifing and add global styles */
 
 
-/* import angular material */
+/* All imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+
+/* Theme */
 
 @import '~@angular/material/theming';
 
 @include mat-core();
 
 .light-theme {
-
     $light-primary: mat-palette($mat-blue, 700);
     $light-accent: mat-palette($mat-pink, A200, A100, A400);
     $light-warn: mat-palette($mat-red);
@@ -18,7 +58,6 @@
 }
 
 .dark-theme {
-    
     $dark-primary: mat-palette($mat-pink);
     $dark-accent: mat-palette($mat-blue, A200, A100, A400);
     $dark-warn: mat-palette($mat-deep-orange);
@@ -27,10 +66,25 @@
     @include angular-material-theme($dark-theme);
 }
 
+// .light-theme {
 
-/* Font import from google fonts */
+//     --background-color: #eeebdd;
+//     --text-color: #151515;
+//     --box-color: #eeebdd;
+//     --buttom-color: #eeebdd;
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+//     --box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+// };
+
+// .dark-theme {
+
+//     --background-color: #151515;
+//     --text-color: #eeebdd;
+//     --box-color: #505050;
+//     --buttom-color: #151515;
+
+// };
 
 
 /* Reseting all containers */
@@ -51,5 +105,22 @@ body {
     height: 10vh;
     font-family: 'Montserrat', sans-serif;
 
+    --background-color: var(--background-color);
+    transition: all .3s ease-in-out;
 };
 
+header {
+
+    --text-color: var(--text-color);
+};
+
+div {
+
+    --background-color: var(--background-color);
+    --box-shadow: var(--box-shadow);
+    transition: all .1s ease;
+};
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

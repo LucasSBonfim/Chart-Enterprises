@@ -1,4 +1,6 @@
 
+@import '../dark-light-theme/dark-light-theme.component.scss';
+
 /* HTML Tags */
 
 header {
@@ -10,7 +12,7 @@ header {
 
     padding: 16px;
 
-    background-color: #101010;
+    background-color: #151515;
 
     align-items: center;
 
@@ -69,13 +71,3 @@ header {
 
 
 /* ID's */
-
-#dropdown {
-
-    color: #eeebdd;
-    margin-left: 20px;
-    // padding: 10px 20px 10px 20px;
-    text-decoration: none;
-    background-color: #6930c3;
-
-};
