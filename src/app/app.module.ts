@@ -9,15 +9,12 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
+/* Angular material */
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { AngularMaterialModule } from './module/angular-material.module';
 
-/* Import dependecies before installed */
-
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import { MatChipsModule } from '@angular/material/chips';
 
 
 /* Components imports */
@@ -25,8 +22,6 @@ import { MatChipsModule } from '@angular/material/chips';
 import { ChartsComponent } from './components/charts/charts.component';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
-
-import { DarkLightThemeComponent } from './components/dark-light-theme/dark-light-theme.component';
 
 
 @NgModule({
@@ -36,8 +31,6 @@ import { DarkLightThemeComponent } from './components/dark-light-theme/dark-ligh
     AppComponent,
     ChartsComponent,
     NavbarComponent,
-    DarkLightThemeComponent
-
   ],
 
   imports: [
@@ -45,14 +38,11 @@ import { DarkLightThemeComponent } from './components/dark-light-theme/dark-ligh
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSidenavModule,
-    MatCardModule,
-    MatButtonModule,
-    MatChipsModule,
+    AngularMaterialModule
   ],
 
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 
 })
 
