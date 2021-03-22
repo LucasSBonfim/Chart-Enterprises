@@ -23,6 +23,7 @@ import { ChartsComponent } from './components/charts/charts.component';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ChartComponent } from './components/chart/chart.component';
+import { ChartListComponent } from './components/chart-list/chart-list.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { ChartComponent } from './components/chart/chart.component';
     ChartsComponent,
     NavbarComponent,
     ChartComponent,
+    ChartListComponent,
   ],
 
   imports: [

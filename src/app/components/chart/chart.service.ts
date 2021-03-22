@@ -6,7 +6,19 @@ import { HttpClient } from '@angular/common/http'
 @Injectable({
   providedIn: 'root'
 })
+
 export class ChartService {
 
-  constructor() { }
+  urlToJson = 'assets/stocked.json';
+  result: any;
+
+  constructor(
+    public http: HttpClient
+  ) {}
+
+  listarArquivo() {
+    
+    return this.http.get<any>(this.urlToJson);
+  };
+
 }

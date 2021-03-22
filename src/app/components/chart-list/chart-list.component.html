@@ -1,0 +1,11 @@
+
+<app-chart
+*ngFor="let elemento of results"
+    [stock]= "elemento.stock"
+    [exchange]= "elemento.exchange"
+    [country]= "elemento.country"
+    [company]= "elemento.company"
+    [variation]= "elemento.variation"
+    [price]= elemento.price
+    [data]= "elemento.chart"
+></app-chart>
