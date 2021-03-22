@@ -34,7 +34,6 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/svg/*",
               "src/styles.scss"
             ],
             "scripts": []
