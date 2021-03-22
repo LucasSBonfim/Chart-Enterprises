@@ -1,14 +1,63 @@
 
-<mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>My App</span>
-  <span class="example-spacer"></span>
-  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
-  </button>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
+<mat-toolbar color="primary" flex="32">
+
+  <span> EnterprisesChart </span>
+
+  <div class="spacer"></div>
+
+  <div class="row">
+
+    <a mat-button color="secondary"> Home </a>
+
+    <a mat-button color="secondary"> Favoritos </a>
+
+    <mat-slide-toggle ></mat-slide-toggle>
+
+  </div>
 </mat-toolbar>
+
+<!-- 
+  <header>
+    
+    <div class="logo">
+
+      <span><b> EnterpisesChart </b></span>
+
+    </div>
+
+      <ul class="menu">
+
+        <li style="margin-top: 8px;"> <a href=""> Home </a> </li>
+
+        <li style="margin-top: 8px"> <a href=""> Favoritos </a> </li>
+
+        <li>  
+          
+          <select class="dropdown">
+
+            <option value="0"> Classificar </option>
+    
+            <option value="1"> Variação </option>
+    
+            <option value="2"> Preço </option>
+
+          </select>
+
+        </li>
+
+        <li>  
+          
+          <select class="dropdown" (ngModelChange)="selectThema()" [(ngModel)]="selectQuantity" >
+    
+            <option *ngFor="let option of options" [value]="option">{{option}}</option>
+  
+
+          </select>
+
+        </li>
+
+      </ul>
+
+     
+
+  </header> -->

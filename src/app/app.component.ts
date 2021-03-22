@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
 
 @Component({
 
@@ -10,7 +10,15 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
 
-  title = 'chart-enterprises'
+  private isDark = false;
+
+  @HostBinding('class') get themeMode() { return
+
+    this.isDark ? 'theme-dark' : 'theme-light';
+
+  }
+
+
 };
 
 

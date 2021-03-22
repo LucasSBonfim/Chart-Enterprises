@@ -2,6 +2,7 @@
 /* This module set as all imports in global app, using class 'AngularMaterialModule' */
 
 import { CommonModule } from '@angular/common';
+
 import { NgModule } from '@angular/core';
 
 import { OverlayModule } from '@angular/cdk/overlay';
@@ -68,6 +69,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { MatTooltipModule } from '@angular/material/tooltip';
 
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 
 const materialModules = [
   CdkTreeModule,
@@ -101,7 +104,8 @@ const materialModules = [
   MatGridListModule,
   MatRadioModule,
   MatDatepickerModule,
-  MatTooltipModule
+  MatTooltipModule,
+  MatSlideToggleModule
 ];
 
 @NgModule({
