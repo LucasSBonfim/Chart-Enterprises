@@ -1,4 +1,7 @@
 
+import { DOCUMENT } from '@angular/common';
+import { Renderer2 } from '@angular/core';
+import { Inject } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,11 +13,26 @@ import { Component, OnInit } from '@angular/core';
 
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  theme: Theme = 'light-theme';
 
-  ngOnInit(): void {
-    
+  constructor(@Inject(DOCUMENT) private document: Document, private renderer: Renderer2) { }
+
+  ngOnInit() {
+    this.initializeTheme();
   }
 
-  
+  switchTheme() {
+    this.document.body.classList.replace(
+      this.theme,
+      this.theme === 'light-theme'
+        ? (this.theme = 'dark-theme')
+        : (this.theme = 'light-theme')
+    )
+  }
+
+  initializeTheme = (): void => this.renderer.addClass(this.document.body, this.theme);
+
 }
+
+export type Theme = 'light-theme' | 'dark-theme';
+

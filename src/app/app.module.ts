@@ -22,6 +22,7 @@ import { AngularMaterialModule } from './module/angular-material.module';
 import { ChartsComponent } from './components/charts/charts.component';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ChartComponent } from './components/chart/chart.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AppComponent,
     ChartsComponent,
     NavbarComponent,
+    ChartComponent,
   ],
 
   imports: [
