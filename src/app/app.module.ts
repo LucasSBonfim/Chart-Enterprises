@@ -13,36 +13,30 @@ import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AngularMaterialModule } from './module/angular-material.module';
-
-
-
 /* Components imports */
-
-import { ChartsComponent } from './components/charts/charts.component';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ChartComponent } from './components/chart/chart.component';
 import { ChartListComponent } from './components/chart-list/chart-list.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ChartModule } from 'angular-highcharts';
 
 
 @NgModule({
 
   declarations: [
-
     AppComponent,
-    ChartsComponent,
     NavbarComponent,
     ChartComponent,
     ChartListComponent,
   ],
 
   imports: [
-
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    ChartModule
   ],
 
   providers: [],
