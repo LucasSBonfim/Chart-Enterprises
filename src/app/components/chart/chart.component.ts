@@ -5,6 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { Chart } from 'angular-highcharts';
 import * as Highcharts from 'highcharts';
+import { ChartService } from './chart.service'
 
 declare var require: any ;
 let Boost = require('highcharts/modules/boost');
@@ -22,6 +23,7 @@ More(Highcharts);
 })
 
 export class ChartComponent implements OnInit {
+  @Input() index = 0;
 
   @Input() stock= '';
 
@@ -81,19 +83,24 @@ export class ChartComponent implements OnInit {
     ],
   };
 
-  constructor() { }
+  constructor( private ChartService: ChartService) { }
 
   ngOnInit() {
-
-    console.log(this.options);
-    console.log(this.stock);
-    console.log(this.price);
-    console.log(this.data);
 
     this.options.title.text = this.stock;
     this.options.series[0].data = this.data;
   };
 
   chart = new Chart(this.options);
+
+
+  favoritar( index: number ) {
+
+    this.ChartService.listarArquivo().subscribe(response => {
+      typeof(response);
+
+      localStorage.setItem('favoritos', JSON.stringify(response[index]));
+    });
+  };
 
 }

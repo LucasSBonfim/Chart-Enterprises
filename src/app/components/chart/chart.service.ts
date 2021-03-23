@@ -10,6 +10,7 @@ import { HttpClient } from '@angular/common/http'
 export class ChartService {
 
   urlToJson = 'assets/stocked.json';
+  storage= [];
   result: any;
 
   constructor(
@@ -20,5 +21,10 @@ export class ChartService {
     
     return this.http.get<any>(this.urlToJson);
   };
+
+  listarFavorito() {
+
+    return this.http.get<any>(this.urlToJson);
+  }
 
 }

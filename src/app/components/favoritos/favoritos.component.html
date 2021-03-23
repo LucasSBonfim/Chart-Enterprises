@@ -2,8 +2,7 @@
 <app-navbar></app-navbar>
 
 <app-chart
-*ngFor="let elemento of results; index as i"
-    [index]= "i"
+*ngFor="let elemento of results"
     [stock]= "elemento.stock"
     [exchange]= "elemento.exchange"
     [country]= "elemento.country"

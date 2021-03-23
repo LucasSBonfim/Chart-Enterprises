@@ -20,6 +20,7 @@ import { ChartComponent } from './components/chart/chart.component';
 import { ChartListComponent } from './components/chart-list/chart-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ChartModule } from 'angular-highcharts';
+import { FavoritosComponent } from './components/favoritos/favoritos.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { ChartModule } from 'angular-highcharts';
     NavbarComponent,
     ChartComponent,
     ChartListComponent,
+    FavoritosComponent,
   ],
 
   imports: [
