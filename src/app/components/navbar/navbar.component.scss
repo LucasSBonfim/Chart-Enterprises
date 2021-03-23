@@ -45,7 +45,7 @@ span {
   };
 
   a {
-
+      border-color: 2px solid var(--text-color);
       padding: 10px 20px 10px 20px;
       color: var(--text-color);
       text-decoration: none;
@@ -54,9 +54,9 @@ span {
 
   a:hover {
 
-      color: var(--text-color);
+      color: var(--button-color);
       text-decoration: none;
-      background-color: #00C7FF;
+      background-color: #dddddd;
   };
 
 };
