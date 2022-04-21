@@ -16,7 +16,7 @@ const routes: Routes = [
   },
 
   { path: 'home', component: ChartListComponent},
-  { path: 'Favoritos', component: FavoritosComponent},
+  { path: 'favoritos', component: FavoritosComponent},
 
 ];
 
